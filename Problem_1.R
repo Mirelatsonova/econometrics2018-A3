@@ -7,20 +7,42 @@ invoices <- read.delim('https://s3.eu-central-1.amazonaws.com/econometrics2018/d
 str(invoices)
 ## 
 
-## Crate a scatterplot
+## a) Scatterplot
 
-ggplot(data = invoices, aes(x = Invoices, y = Time)) + geom_point()
+ggplot(data = ???, aes(x = ???, y = ???)) +
+  geom_point()
 
+## b) Fit a linear regression model with OLS.
 
-## Create a 
+fit <- lm(??? ~ ???, data = invoices)
 
-fit <- lm(Time ~ Invoices, data = invoices)
+## c) Summary of the model fit
 summary(fit)
 
-## 
+## d) Plot estimated regression line
 
-fit
+ggplot(data = ???, aes(x = ???, y = ???)) +
+  geom_point() +
+  geom_abline(slope = ???, intercept = ???)
 
-ggplot(data = invoices, aes(x = Invoices, y = Time)) +
-  geom_point() + 
-  geom_abline(slope = 0.01129, intercept = 0.64171)
+## e) Estimate expected time for 130 invoices E(Y|X=130)
+
+## f) Estimate a 95% confidence interval for the start-up time
+
+## g) Estimate a 95% prediction interval for E(Y|X=130)
+
+## h) Test
+
+## i) 
+
+## k) 
+
+lm(Time ~ 1, data = invoices)
+
+## l) 
+
+ggplot(data = ???, aes(x = ???, y = ???)) +
++ geom_point()
++ geom_abline(slope = ???, intercept = ???)
+
+
