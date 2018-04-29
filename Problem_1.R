@@ -1,48 +1,18 @@
-## Problem set 3, Assignment 2
+## Problem set 3, Problem 1
 
 library(ggplot2)
 
-## Read the data
-invoices <- read.delim('https://s3.eu-central-1.amazonaws.com/econometrics2018/data/invoices.txt')
-str(invoices)
-## 
+childiq <- read.csv('https://s3.eu-central-1.amazonaws.com/econometrics2018/data/childiq.csv')
 
-## a) Scatterplot
+## a)
 
-ggplot(data = ???, aes(x = ???, y = ???)) +
-  geom_point()
+t.test(???, var.equal = TRUE)
 
-## b) Fit a linear regression model with OLS.
+## b)
 
-fit <- lm(??? ~ ???, data = invoices)
+lm(??? ~ ???, data = childiq)
 
-## c) Summary of the model fit
-summary(fit)
+## Estimated regression line: Y_hat = 
 
-## d) Plot estimated regression line
-
-ggplot(data = ???, aes(x = ???, y = ???)) +
-  geom_point() +
-  geom_abline(slope = ???, intercept = ???)
-
-## e) Estimate expected time for 130 invoices E(Y|X=130)
-
-## f) Estimate a 95% confidence interval for the start-up time
-
-## g) Estimate a 95% prediction interval for E(Y|X=130)
-
-## h) Test
-
-## i) 
-
-## k) 
-
-lm(Time ~ 1, data = invoices)
-
-## l) 
-
-ggplot(data = ???, aes(x = ???, y = ???)) +
-+ geom_point()
-+ geom_abline(slope = ???, intercept = ???)
-
+## c)
 
